@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", UserSchema);
 
-app.post("/register", async (req, res) => {
+app.post("/", async (req, res) => {
   const { username, password } = req.body;
   try {
     const newUser = new User({
